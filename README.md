@@ -6,7 +6,7 @@
 
 ## Code setup
 
- - Clone/download the project from this git repository - `https://github.com/anand96ms/fund-transfer.git`
+ - Clone/download the project from this git repository - `https://github.com/anand96ms/transactions.git`
  - Run `npm install`
 
 ## Development server
