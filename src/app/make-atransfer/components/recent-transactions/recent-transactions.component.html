@@ -1,0 +1,68 @@
+<header>
+  <span class="headerDesign">
+    <i class="fas fa-list-ul"></i>
+  </span>
+  <div>
+    <label>Transactions <strong>List</strong></label>
+  </div>
+</header>
+<section>
+  <div class="row filterDiv">
+    <div class="col-sm-12 col-md-12">
+      <app-filter (inputChange) = "inputChange($event)"></app-filter>
+    </div>
+  </div>
+</section>
+
+
+<section class="transactions-container">
+  <ul>
+      <li *ngFor="let history of transactionHistory">
+          <span class="bar" [style.backgroundColor]="history.categoryCode"></span>
+          <span class="date">{{history.dates.valueDate | date:'MMM d'}}</span>
+          <span class="transactionType">
+              <p>
+                  <strong>{{history.merchant.name}}</strong>
+                  {{history.transaction.type}}
+              </p>
+          </span>
+          
+          <span class="amount" 
+          [ngStyle]="{'color':history.transaction.creditDebitIndicator == 'CRDT' ? 'green' : 'red' }"
+          >
+            <label *ngIf="history.transaction.creditDebitIndicator == 'CRDT'"
+          >+</label
+        >
+        <label *ngIf="history.transaction.creditDebitIndicator == 'DBIT'"
+          >-</label
+        >
+            {{history.transaction.amountCurrency.amount | currency:'USD':true}}</span>
+      </li>
+  </ul>
+</section>
+
+
+
+<!-- <section>
+  <table>
+    <tr></tr>
+    <tr
+      *ngFor="let history of transactionHistory"
+      class="rowFormat"
+      [style.border-left-color]="history.categoryCode"
+    >
+      <td>{{ history.dates.valueDate | date: "MMM dd" }}</td>
+      
+      <td>{{ history.merchant.name }} <br />{{ history.transaction.type }}</td>
+      <td>
+        <label *ngIf="history.transaction.creditDebitIndicator == 'CRDT'"
+          >+</label
+        >
+        <label *ngIf="history.transaction.creditDebitIndicator == 'DBIT'"
+          >-</label
+        >
+        {{ history.transaction.amountCurrency.amount | currency }}
+      </td>
+    </tr>
+  </table>
+</section> -->

@@ -1,0 +1,56 @@
+<div class="row topDiv">
+  <div class="col-md-1 col-sm-1"></div>
+  <div class="col-md-3 col-sm-12">
+    <header>
+      <span class="headerDesign">
+        <i class="far fa-credit-card"></i>
+      </span>
+      <div>
+        <label><strong>Make</strong> Transfer</label>
+      </div>
+    </header>
+    <section>
+      <form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <label> From Account</label>
+
+          <input id="from" class="form-control" type="text" formControlName="fromAccount" />
+
+        </div>
+        <div class="row">
+          <label> To Account</label>
+          <input id="to" type="text" formControlName="toAccount" />
+          <div *ngIf="transferForm.controls['toAccount'].invalid && (transferForm.controls['toAccount'].dirty 
+          || transferForm.controls['toAccount'].touched)">
+            <div *ngIf="transferForm.controls['toAccount'].errors.required">
+              This field is required.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <label> Amount</label>
+          <input id="amount" placeholder="$0.00" type="text"
+            onkeydown="return event.keyCode !== 69 && event.keyCode !== 189" formControlName="amount" />
+          <div *ngIf="transferForm.controls['amount'].invalid && (transferForm.controls['amount'].dirty 
+          || transferForm.controls['amount'].touched)">
+            <div *ngIf="transferForm.controls['amount'].errors.required">
+              This field is required.
+            </div>
+          </div>
+          <label class="erroMsg" *ngIf="isInvalid">
+            There is not enough balance</label>
+        </div>
+        <div class="row">
+          <app-submit-button></app-submit-button>
+        </div>
+      </form>
+    </section>
+  </div>
+  <div class="row">
+    <div class="col-sm-12"></div>
+  </div>
+  <div class="col-sm-12 col-md-7">
+    <app-recent-transactions [transactionData]="transactionData"></app-recent-transactions>
+  </div>
+  <div class="col-1"></div>
+</div>

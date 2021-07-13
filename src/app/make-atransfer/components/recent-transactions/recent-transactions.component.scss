@@ -1,0 +1,111 @@
+
+header {
+  background-color: #1180aa;
+  color: #ffffff;
+  padding: 15px;
+}
+section {
+  background-color: #ffffff;
+  padding: 5px;
+}
+/* Style inputs */
+input[type="text"] {
+  margin: 0 0;
+}
+.formatSortLabel {
+  padding: 4px 11px;
+  float: left;
+  font-size: 12px;
+}
+.trasactionImg {
+  height: 36px;
+  filter: grayscale(100%);
+}
+.btn-group button {
+  background-color: #ffffff;
+  border: 1px solid #ada8a8;
+  padding: 4px 11px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+  border: 1px solid #ada8a8;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #e8eef1;
+}
+.clearFilter {
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+}
+.rowFormat {
+  border-left: solid;
+}
+
+
+ul {
+  margin: 0 15px;
+  border-top: 2px solid #CACACA;
+  border-right: 2px solid #CACACA;
+  padding-left: 0%;
+}
+li {
+  display: table;
+  width: 100%;
+}
+li span {
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 2px solid #CACACA;
+}
+
+ul li .bar {
+  width: 10px;
+  border-bottom: none;
+}
+
+ul li .date {
+  text-align: center;
+}
+ul li .amount {
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 700;
+}
+
+ul li .transactionType {
+  text-align: left;
+}
+ul li .amount,
+ul li span p {
+  font-size: 16px;
+}
+ul li span p strong {
+  line-height:  20px;
+  display: block;
+  font-weight: 700;
+}
+
+ul li .amount {
+  width: 25%;
+}
+ul li .date {
+  width: 12%;
+}
+.filterDiv{
+  margin-left: 1%;
+}

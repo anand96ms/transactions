@@ -1,0 +1,36 @@
+header {
+  background-color: #1180aa;
+  color: #ffffff;
+  padding: 15px;
+}
+
+/* Style the buttons */
+button {
+  background-color: #e25a2c;
+  color: #ffffff;
+  padding: 7px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+section {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.topDiv {
+  padding: 3% 0;
+}
+.imgFormatter {
+  height: 14px;
+}
+label {
+  overflow-wrap: break-word;
+}
+.transferLabel {
+  padding: 6px;
+}
+.erroMsg {
+  color: red;
+}

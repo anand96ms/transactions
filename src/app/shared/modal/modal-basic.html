@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <h2 class="modal-title">Review Transfer</h2>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <h4><em>Are you ready to send out this transfer?</em></h4>
+  <p><strong>It will bw sent to account:</strong></p>
+  <p>{{toAccount}}</p>
+  <p><strong>With the amount of:</strong></p>
+  <p>${{amount}}</p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close')">Close</button>
+  <button type="button" class="btn btn-outline-dark transfer" (click)="activeModal.close('Ok')">Send Transfer</button>
+</div>
