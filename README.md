@@ -35,4 +35,4 @@
 
 ## Hosting information
 
- - This application is hosted at `https://anand96ms.github.io/fund-transfer/`.
+ - This application is hosted at `https://anand96ms.github.io/transactions/`.
