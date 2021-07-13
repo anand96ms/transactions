@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  font-size: 14px;
+}
+html, body{
+  background: url('./assets/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Style inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 4px;
+  font-size: 11px;
+  display: inline-block;
+  outline: none;
+}
+.headerDesign {
+  float: left;
+  margin-right: 2%;
+}
+
+app-submit-button>button, .transfer{
+  background-color: #e25a2c !important;
+  color: #ffffff !important;
+  padding: 7px 20px !important;
+  margin: 8px 0 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  float: right !important;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
