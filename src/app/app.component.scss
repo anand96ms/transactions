@@ -2,21 +2,24 @@ header {
   background-color: #ffffff;
   padding: 15px;
 }
-.section{
+.section {
   backdrop-filter: blur(5px);
 }
 
 .footerClass {
   background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 .alignleft {
-	float: left;
+  float: left;
 }
 .alignright {
-	float: right;
+  float: right;
 }
-.headertxt{
+.headertxt {
   color: #00a1e0;
   font-size: 11px;
 }
