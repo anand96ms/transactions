@@ -23,7 +23,7 @@
           <div *ngIf="transferForm.controls['toAccount'].invalid && (transferForm.controls['toAccount'].dirty 
           || transferForm.controls['toAccount'].touched)">
             <div *ngIf="transferForm.controls['toAccount'].errors.required">
-              This field is required.
+              <label class="erroMsg">This field is required.</label>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
           <div *ngIf="transferForm.controls['amount'].invalid && (transferForm.controls['amount'].dirty 
           || transferForm.controls['amount'].touched)">
             <div *ngIf="transferForm.controls['amount'].errors.required">
-              This field is required.
+              <label class="erroMsg">This field is required.</label>
             </div>
           </div>
           <label class="erroMsg" *ngIf="isInvalid">
