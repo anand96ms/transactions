@@ -44,7 +44,6 @@ describe('MakeATransferComponent', () => {
     component.isPreview = true;
     updateForm('XYZ Company', 99);
     component.onSubmit();
-    //component.showPreview();
     expect(component.transferForm.value).toEqual({
       toAccount: 'XYZ Company',
       amount: 99,
