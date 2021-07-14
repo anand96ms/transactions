@@ -18,7 +18,7 @@ export class RecentTransactionsComponent implements OnInit {
     this.xtransactionData = param;
     this.updateTransactionHistory();
   }
-  constructor(private service:TransactionService) { }
+  constructor(private service: TransactionService) { }
 
   ngOnInit(): void {
     this.service.get().subscribe(data => {
