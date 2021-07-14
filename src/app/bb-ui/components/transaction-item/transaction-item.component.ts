@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//dirty
+// dirty
 @Component({
   selector: 'app-transaction-item',
   templateUrl: './transaction-item.component.html',
