@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from "rxjs";
-import { map } from 'rxjs/operators'
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { TransactionHistory } from '../model/transaction-history.model';
 
 @Injectable({
@@ -9,10 +9,10 @@ import { TransactionHistory } from '../model/transaction-history.model';
 })
 export class TransactionService {
 
-    constructor(private _http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
     get(): Observable<TransactionHistory[]> {
-        return this._http.get('assets/transactions.json')
+        return this.http.get('assets/transactions.json')
             .pipe(
                 map((response) => {
                     return JSON.parse(JSON.stringify(response));
