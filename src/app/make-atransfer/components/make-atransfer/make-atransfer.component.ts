@@ -23,8 +23,7 @@ export class MakeATransferComponent implements OnInit {
   isPreview: boolean;
   isInvalid: boolean;
   previewData: any;
-  constructor(private formBuilder: FormBuilder,
-    private modalService: NgbModal) { }
+  constructor(private formBuilder: FormBuilder, private modalService: NgbModal) { }
   ngOnInit(): void {
     this.createForm();
   }
